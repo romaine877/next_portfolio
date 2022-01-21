@@ -6,4 +6,22 @@
 
 html{
   background-color: #0b1120;
+  scrollbar-color: #c8cdda ;
+  scrollbar-width: thin; 
+}
+
+
+
+body::-webkit-scrollbar {
+  width: 5px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #0b1120;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: lavender;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid lavender;  /* creates padding around scroll thumb */
 }

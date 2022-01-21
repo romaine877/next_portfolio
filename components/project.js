@@ -1,34 +1,36 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-export default function Project({ title, body, img, closeModal, id }) {
-    const handleClose = () => {
-        closeModal();
-    };
+export default function Project({
+  id,
+  image,
+  name,
+  description,
+  link,
+  selectHandler,
+}) {
   return (
-
-    <div onClick={handleClose} className=' bg-stone-500 h-full w-full z-40 flex fixed inset-0 bg-opacity-25 items-center justify-center'>
-            <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={(e)=> e.stopPropagation()}
-                layoutId={id}
-                className="absolute p-5 m-8 bg-white rounded-lg  w-9/12 h-auto z-50"
-              >
-                <motion.div className='flex'>
-                <motion.img src={img} alt='Weather App' width={135} height={240} />
-                <motion.div>
-                     <motion.h3 className="font-bold text-xl m-2 py-2">
-                    {title}
-                  </motion.h3>
-                <motion.div className='m-3'>{body}</motion.div>
-              </motion.div>
-                </motion.div>
-                 
-                </motion.div>
-            
-        </div>
-
-  )
+    <motion.div
+      onClick={selectHandler}
+      layoutId={id}
+      key={id}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="bg-indigo-50 rounded-xl flex p-3 m-7 "
+    >
+      <div className="m-2 w-1/3 grid justify-items-center items-center">
+        <Image src={image} alt={name} width={90} height={160} layout="fixed"/>
+      </div>
+      <motion.div className="flex flex-col justify-between w-1/2">
+        <motion.h3 className="font-bold text-xl m-2 py-2 text-center">{name}</motion.h3>
+        <motion.p className="m-3 hidden md:inline">{description}</motion.p>
+        <motion.div className="bg-indigo-500 hover:bg-indigo-700 hover:scale-105 transition ease-in text-white font-bold py-2 px-3 rounded-md  m-4 text-center bottom-2 ">
+          <motion.a href={link} target="_blank" rel="noopener noreferrer">
+            View Project
+          </motion.a>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
 }
