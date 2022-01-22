@@ -33,7 +33,7 @@ export default function Navbar() {
         <span className=" text-base font-normal md:text-left text-center">Full Stack Developer</span>
       </a>
       </Link>
-      <nav className="md:space-x-7 md:space-y-0 space-y-1 py-3 flex flex-col md:flex-row text-center">
+      <nav className="md:space-x-7 md:space-y-0 space-y-1 md:py-3 flex flex-col md:flex-row text-center">
           <Link href='/'>
             <a className=" dark:text-white text-black p-3 hover:text-indigo-500 dark:hover:text-indigo-500 hover:bg-violet-50 rounded-lg transition ease-in ">Home</a>
           </Link>
@@ -53,9 +53,10 @@ export default function Navbar() {
             }>
               {darkMode ? (
 
-                <HiMoon className="text-blue-500 w-10 h-10 p-3 hover:text-indigo-600 hover:scale-105 bg-violet-50 rounded-lg transition ease-in mx-auto" />
-              ) : (
                 <HiSun className="text-yellow-300 w-10 h-10 p-3 hover:text-yellow-600 hover:scale-105 bg-violet-50 rounded-lg transition ease-in mx-auto" />
+                
+              ) : (
+                <HiMoon className="text-blue-500 w-10 h-10 p-3 hover:text-indigo-600 hover:scale-105 bg-violet-50 rounded-lg transition ease-in mx-auto" />
               )}
                 
               

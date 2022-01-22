@@ -15,9 +15,11 @@ export default function Layout({ children, title }) {
       
         <Head>
             <title>Romaine Halstead - {title}</title>
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/images/react.png" />
             <meta name='description' content='Portfolio of Romaine Halstead' />
-            <meta name='keywords' content='portfolio, react, javascript, html, css' />
+            <meta name='keywords' content='portfolio, react, javascript, html, css, flutter' />
+            <meta name='author' content='Romaine Halstead' />
+
         </Head>
         <Navbar/>
         
