@@ -17,7 +17,7 @@ export default function Project({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="bg-indigo-50 rounded-xl flex flex-col text-center md:flex-row p-3 m-7 cursor-pointer"
+      className="bg-white dark:bg-indigo-50 rounded-xl flex flex-col text-center md:flex-row p-3 m-7 cursor-pointer shadow-lg dark:shadow-none "
     >
       <div className="m-2 w-full md:w-max mx-auto ">
         <Image src={image} alt={name} width={200} height={200} layout="fixed"/>

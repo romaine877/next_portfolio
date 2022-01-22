@@ -7,7 +7,7 @@ export default function contact() {
   return (
     <Layout title='Contact'>
       <div className="w-4/5 mx-auto my-10 md:flex md:flex-row-reverse md:justify-between">
-      <motion.div className="  md:w-1/2 mb-10 md:m-5 p-5 bg-indigo-50 rounded-md"
+      <motion.div className="  md:w-1/2 mb-10 md:m-5 p-5 dark:bg-indigo-50 bg-white shadow-xl rounded-md"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -54,8 +54,8 @@ export default function contact() {
         </motion.div>
         <div className="md:w-1/2 flex flex-col justify-between">
           <div className="mb-10">
-            <h1 className="text-4xl font-bold text-white">Contact</h1>
-            <p className="text-white my-4">
+            <h1 className="text-4xl font-bold dark:text-white">Contact</h1>
+            <p className="dark:text-white my-4">
               you can contact me at such place at such time, ill get in touch
               with you soon
             </p>
@@ -64,7 +64,7 @@ export default function contact() {
             <a href="tel:8768968976" className="text-base bg-blue-500 w-72 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 py-3 px-4 text-white font-bold rounded-md flex justify-start mb-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mr-3 text-white"
+                className="h-5 w-5 mr-3 dark:text-white"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -86,21 +86,22 @@ export default function contact() {
             </a>
           </div>
           <div className="flex w-1/3 m-5 justify-between">
-            <div className="hover:bg-indigo-600 rounded-full p-5 transition ease-in">
+            <div className="hover:bg-indigo-600 rounded-full p-5 transition ease-in dark:text-white hover:text-white">
               <a href="https://github.com/romaine877"
                 target="_blank"
                 rel="noopener noreferrer"
               >
 
-            <FaGithub className="h-10 w-10 text-white" />
+            <FaGithub className="h-10 w-10 " />
               </a>
             </div>
-            <div className="hover:bg-indigo-600 rounded-full p-5 transition ease-in">
+            <div className="hover:bg-indigo-600 rounded-full p-5 transition ease-in dark:text-white hover:text-white">
               <a href="https://www.linkedin.com/in/romaine877/"
               target="_blank"
               rel="noopener noreferrer"
+              
               >
-            <FaLinkedin className="h-10 w-10 text-white" />     
+            <span><FaLinkedin className="h-10 w-10 " /></span>     
                 </a>
             </div>
           </div>

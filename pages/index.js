@@ -9,7 +9,7 @@ export default function Home() {
     <Layout title={'Home'}>
       <div className="md:h-5/6 flex items-center">
         <div className=" w-5/6 mx-auto ">
-          <h1 className="text-5xl font-bold pb-6 text-white text-center">
+          <h1 className="text-5xl font-bold pb-6 dark:text-white text-black text-center">
             Freelance Web and Mobile App Developer
           </h1>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4 py-10 justify-items-center">
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
           <div className="flex my-2 justify-center">
             <Link href="/contact">
-              <button className="bg-blue-500 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 mb-20 py-3 px-4 text-white font-bold rounded-md flex">
+              <button className="bg-blue-500 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 mb-20 py-3 px-4 dark:text-white text-black font-bold rounded-md flex">
                 Lets Get to Work
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

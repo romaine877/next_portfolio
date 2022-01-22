@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 html{
-  background-color: #0b1120;
+ 
   scrollbar-color: #c8cdda ;
   scrollbar-width: thin; 
 }

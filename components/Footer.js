@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer() {
   return (
     <div className="flex justify-center items-center h-16 ">
-      <p className="text-white text-center">
+      <p className="dark:text-white text-center">
         © {new Date().getFullYear()}, Built by Romaine Halstead with
         {` `}
         <a href="https://nextjs.org/">Next.js</a>
