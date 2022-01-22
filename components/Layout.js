@@ -14,7 +14,7 @@ export default function Layout({ children, title }) {
         <div className='max-w-7xl mx-auto relative h-screen'>
       
         <Head>
-            <title>Romaine Halstead {title}</title>
+            <title>Romaine Halstead - {title}</title>
             <link rel="icon" href="/favicon.ico" />
             <meta name='description' content='Portfolio of Romaine Halstead' />
             <meta name='keywords' content='portfolio, react, javascript, html, css' />

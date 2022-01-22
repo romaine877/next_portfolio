@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title={'Home'}>
       <div className="md:h-5/6 flex items-center">
-        <div className=" w-2/3 md:w-5/6 mx-auto ">
+        <div className=" w-5/6 mx-auto ">
           <h1 className="text-5xl font-bold pb-6 text-white text-center">
             Freelance Web and Mobile App Developer
           </h1>
@@ -25,7 +25,8 @@ export default function Home() {
                 width={100}
                 height={100}
                 src="/images/flutter.png"
-                layout="fixed"
+                
+                
               />
             </motion.div>
             <motion.div
@@ -39,7 +40,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src="/images/tailwind.png"
-                layout="fixed"
+                
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
@@ -97,8 +98,8 @@ export default function Home() {
           </div>
           <div className="flex my-2 justify-center">
             <Link href="/contact">
-              <button className="bg-blue-500 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 py-3 px-4 text-white font-bold rounded-md flex">
-                Let's Get to Work{" "}
+              <button className="bg-blue-500 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 mb-20 py-3 px-4 text-white font-bold rounded-md flex">
+                Lets Get to Work
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 pl-1"

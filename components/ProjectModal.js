@@ -9,7 +9,7 @@ export default function ProjectModal({ id, image, name, description, link, selec
     };
   return (
 
-    <div onClick={handleClose} className=' bg-stone-500 h-full w-full z-40 flex fixed inset-0 bg-opacity-25 items-center justify-center'>
+    <div onClick={handleClose} className='bg-stone-500 h-full w-full z-40 flex fixed inset-0 bg-opacity-25 items-center justify-center'>
 
 {/* <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
   <div className="md:flex">
@@ -48,7 +48,7 @@ export default function ProjectModal({ id, image, name, description, link, selec
                 <motion.div className='md:flex'>
                 <motion.div className='p-5'>
 
-                <Image src={image} alt={name} width={100} height={200}/>
+                <Image src={image} alt={name} width={200} height={200}/>
                 </motion.div>
                 <motion.div>
                      <motion.h3 className="font-bold text-xl m-2 py-2">
