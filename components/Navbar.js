@@ -12,16 +12,20 @@ export default function Navbar() {
   useEffect(() => {
     
     const html = document.getElementsByTagName("html")[0];
-    const body = document.getElementById("pls");
+
+    if(localStorage.getItem('darkMode')=== null) {
+      localStorage.setItem('darkMode', 'true')
+    }
     if (localStorage.getItem("darkMode") === "true") {
       html.classList.add("dark");
       body.classList.add("dark");
       setDarkMode(true);
-    } else {
+    } else if (localStorage.getItem("darkMode") === "false") {
       html.classList.remove("dark");
       body.classList.remove("dark");
       setDarkMode(false);
     }
+  
   }, [darkMode]);
 
   
