@@ -39,8 +39,7 @@ export default function contact() {
                 name="message"
                 id="message"
                 rows="5"
-                className="w-full"
-                className="bg-white rounded shadow-sm mb-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+                className="w-full bg-white rounded shadow-sm mb-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
               />
               <button
                 type="submit"

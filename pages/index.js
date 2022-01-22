@@ -25,7 +25,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src="/images/flutter.png"
-                
+                alt="flutter"
                 
               />
             </motion.div>
@@ -40,7 +40,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src="/images/tailwind.png"
-                
+                alt="tailwind"
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
@@ -54,6 +54,7 @@ export default function Home() {
                 height={100}
                 src="/images/react.png"
                 layout="fixed"
+                alt="react"
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
@@ -67,6 +68,7 @@ export default function Home() {
                 height={100}
                 src="/images/js.png"
                 layout="fixed"
+                alt="JavaScript"
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
@@ -80,6 +82,7 @@ export default function Home() {
                 height={100}
                 src="/images/next.jpg"
                 layout="fixed"
+                alt="nextjs"
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
@@ -93,6 +96,7 @@ export default function Home() {
                 height={100}
                 src="/images/firebase.png"
                 layout="fixed"
+                alt="firebase"
               />
             </motion.div>
           </div>
