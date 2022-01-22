@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <header className="flex flex-col md:flex-row justify-between items-center p-5">
       <Link href="/">
-      <a className="dark:text-white text-black p-3 hover:text-indigo-500 hover:bg-violet-50 rounded-lg transition ease-in text-xl font-bold md:text-left text-center">
+      <a className="dark:text-white text-black p-3 hover:text-indigo-500 hover:bg-violet-50 dark:hover:text-indigo-500 rounded-lg transition ease-in text-xl font-bold md:text-left text-center">
        Romaine Halstead <br/>
         <span className=" text-base font-normal md:text-left text-center">Full Stack Developer</span>
       </a>
@@ -53,9 +53,9 @@ export default function Navbar() {
             }>
               {darkMode ? (
 
-                <HiMoon className="text-blue-500 w-10 h-10 p-3 hover:text-indigo-600 hover:scale-105 bg-violet-50 rounded-lg transition ease-in " />
+                <HiMoon className="text-blue-500 w-10 h-10 p-3 hover:text-indigo-600 hover:scale-105 bg-violet-50 rounded-lg transition ease-in mx-auto" />
               ) : (
-                <HiSun className="text-yellow-300 w-10 h-10 p-3 hover:text-yellow-600 hover:scale-105 bg-violet-50 rounded-lg transition ease-in " />
+                <HiSun className="text-yellow-300 w-10 h-10 p-3 hover:text-yellow-600 hover:scale-105 bg-violet-50 rounded-lg transition ease-in mx-auto" />
               )}
                 
               
