@@ -1,30 +1,61 @@
 import Layout from "../components/Layout";
-import {FaGithub, FaLinkedin} from "react-icons/fa";
-import {motion} from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 export default function Contact() {
-
-
+  const router = useRouter()
   const [values, setValues] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const hasEmptyFields = Object.values(values).some((element) => element === "");
+
+    const hasEmptyFields = Object.values(values).some(
+      (element) => element === ""
+    );
 
     if (hasEmptyFields) {
       alert("Please fill out all fields");
     } else {
-      alert("Message sent!");
-      console.log(values);
-
+      const res = await toast.promise(
+        fetch("/api/send", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }),
+        {
+          success: "Your message has been sent successfully",
+          error: "There was an error sending your message",
+          pending: "Sending your message...",
+        },
+        {
+          position: toast.POSITION.TOP_CENTER,
+          
+          theme: localStorage.getItem("theme") === "dark" ? "dark" : "light",
+          
+          autoClose: 700,
+          hideProgressBar: true,
+          onClose: () => {
+            setValues({
+              name: "",
+              email: "",
+              message: "",
+            })
+           router.push("/")
+          },
+        }
+      );
     }
-  }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,14 +63,17 @@ export default function Contact() {
   };
 
   return (
-    <Layout title='Contact'>
+    <Layout title="Contact">
       <div className="w-4/5 mx-auto my-10 md:flex md:flex-row-reverse md:justify-between">
-      <motion.div className="  md:w-1/2 mb-10 md:m-5 p-5 dark:bg-indigo-50 bg-white shadow-xl rounded-md"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      >
-          <form onSubmit={handleSubmit} >
+        <ToastContainer 
+        />
+        <motion.div
+          className="  md:w-1/2 mb-10 md:m-5 p-5 dark:bg-indigo-50 bg-white shadow-xl rounded-md"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <form onSubmit={handleSubmit}>
             <div className="flex flex-col m-5 ">
               <label htmlFor="name" className="text-gray-700 text-sm mb-2">
                 Name
@@ -52,8 +86,8 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="  bg-white rounded shadow-md mb-2 px-3 text-gray-700 focus:ring-blue-500 border border-grey-200"
-                />
-                <label htmlFor="email" className="text-gray-700 text-sm mb-2">
+              />
+              <label htmlFor="email" className="text-gray-700 text-sm mb-2">
                 Email
               </label>
               <input
@@ -64,8 +98,8 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="bg-white rounded shadow-md mb-2 px-3 text-gray-700 focus:ring-blue-500 border border-grey-200"
-                />
-                <label htmlFor="message" className="text-gray-700 text-sm mb-2">
+              />
+              <label htmlFor="message" className="text-gray-700 text-sm mb-2">
                 Message
               </label>
               <textarea
@@ -83,7 +117,6 @@ export default function Contact() {
               >
                 Submit
               </button>
-
             </div>
           </form>
         </motion.div>
@@ -96,7 +129,10 @@ export default function Contact() {
             </p>
           </div>
           <div className="mb-10">
-            <a href="tel:8768968976" className="text-base bg-blue-500 w-72 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 py-3 px-4 text-white font-bold rounded-md flex justify-start mb-5">
+            <a
+              href="tel:8768968976"
+              className="text-base bg-blue-500 w-72 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 py-3 px-4 text-white font-bold rounded-md flex justify-start mb-5"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 mr-3 dark:text-white"
@@ -107,7 +143,10 @@ export default function Contact() {
               </svg>
               +876-896-8976
             </a>
-            <a href="mailto:romaine877@gmail.com" className="text-base bg-blue-500 w-72 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 py-3 px-4 text-white font-bold rounded-md flex justify-start">
+            <a
+              href="mailto:romaine877@gmail.com"
+              className="text-base bg-blue-500 w-72 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 py-3 px-4 text-white font-bold rounded-md flex justify-start"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 mr-3 "
@@ -122,26 +161,27 @@ export default function Contact() {
           </div>
           <div className="flex w-1/3 m-5 justify-between">
             <div className="hover:bg-indigo-600 rounded-full p-5 transition ease-in dark:text-white hover:text-white">
-              <a href="https://github.com/romaine877"
+              <a
+                href="https://github.com/romaine877"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-
-            <FaGithub className="h-10 w-10 " />
+                <FaGithub className="h-10 w-10 " />
               </a>
             </div>
             <div className="hover:bg-indigo-600 rounded-full p-5 transition ease-in dark:text-white hover:text-white">
-              <a href="https://www.linkedin.com/in/romaine877/"
-              target="_blank"
-              rel="noopener noreferrer"
-              
+              <a
+                href="https://www.linkedin.com/in/romaine877/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-            <span><FaLinkedin className="h-10 w-10 " /></span>     
-                </a>
+                <span>
+                  <FaLinkedin className="h-10 w-10 " />
+                </span>
+              </a>
             </div>
           </div>
         </div>
-        
       </div>
     </Layout>
   );
