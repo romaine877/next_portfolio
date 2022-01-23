@@ -40,7 +40,7 @@ export default function Contact() {
         message: "",
       });
       if(res.ok){
-        toast.success(`We\'ve recieved your email and will contact you soon. ${emailApi}`,{
+        toast.success(`We\'ve recieved your email and will contact you soon.`,{
           theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
           position: "top-center",
             autoClose: 3000,
@@ -56,7 +56,7 @@ export default function Contact() {
         });
         
       }else{
-        toast.error("Sorry please try again later",{
+        toast.error(`Sorry please try again later ${emailApi}`,{
           theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
           position: "top-center",
             autoClose: 5000,
