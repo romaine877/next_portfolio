@@ -50,7 +50,7 @@ export default function Contact() {
             draggable: true,
             progress: undefined,
         });
-        
+        router.push("/");
       }else{
         toast.error("Sorry please try again later",{
           theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
@@ -63,7 +63,7 @@ export default function Contact() {
             progress: undefined,
         });
       }
-      router.push("/");
+      
        
       
     }
