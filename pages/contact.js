@@ -56,7 +56,7 @@ export default function Contact() {
         });
         
       }else{
-        toast.error(`Sorry please try again later ${emailApi}`,{
+        toast.error(`Sorry please try again later`,{
           theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
           position: "top-center",
             autoClose: 5000,
