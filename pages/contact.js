@@ -32,7 +32,7 @@ export default function Contact() {
         },
         body: JSON.stringify(values),
       })
-
+      
       
       setValues({
         name: "",
@@ -40,7 +40,7 @@ export default function Contact() {
         message: "",
       });
       if(res.ok){
-        toast.success('We\'ve recieved your email and will contact you soon.',{
+        toast.success(`We\'ve recieved your email and will contact you soon. ${emailApi}`,{
           theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
           position: "top-center",
             autoClose: 3000,
@@ -49,8 +49,12 @@ export default function Contact() {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
+            onClose: () => {
+              router.push("/");
+              console.log(emailApi)
+            }
         });
-        router.push("/");
+        
       }else{
         toast.error("Sorry please try again later",{
           theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
@@ -61,6 +65,10 @@ export default function Contact() {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
+            onClose: () => {
+              router.push("/");
+              console.log(emailApi)
+            }
         });
       }
       
