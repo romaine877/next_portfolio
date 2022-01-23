@@ -34,7 +34,11 @@ export default function Contact() {
       })
 
       
-
+      setValues({
+        name: "",
+        email: "",
+        message: "",
+      });
       if(res.ok){
         toast.success('We\'ve recieved your email and will contact you soon.',{
           theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
@@ -51,7 +55,7 @@ export default function Contact() {
         toast.error("Sorry please try again later",{
           theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
           position: "top-center",
-            autoClose: 3000,
+            autoClose: 5000,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
@@ -59,7 +63,7 @@ export default function Contact() {
             progress: undefined,
         });
       }
-      
+      router.push("/");
        
       
     }
