@@ -16,6 +16,8 @@ export default function Layout({ children, title }) {
         <Head>
             <title>Romaine Halstead - {title}</title>
             <link rel="icon" href="/images/react.png" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            
             <meta name='description' content='Portfolio of Romaine Halstead' />
             <meta name='keywords' content='portfolio, react, javascript, html, css, flutter' />
             <meta name='author' content='Romaine Halstead' />

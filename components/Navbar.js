@@ -32,20 +32,20 @@ export default function Navbar() {
   return (
     <header className="flex flex-col md:flex-row justify-between items-center p-5">
       <Link href="/">
-      <a className="dark:text-white text-black p-3 hover:text-indigo-500 hover:bg-violet-50 dark:hover:text-indigo-500 rounded-lg transition ease-in text-xl font-bold md:text-left text-center">
+      <a className="dark:text-white text-black p-3 hover:text-indigo-500 hover:bg-white hover:shadow-lg dark:hover:text-indigo-500 rounded-lg transition ease-in text-xl font-bold md:text-left text-center">
        Romaine Halstead <br/>
         <span className=" text-base font-normal md:text-left text-center">Full Stack Developer</span>
       </a>
       </Link>
       <nav className="md:space-x-7 md:space-y-0 space-y-1 md:py-3 flex flex-col md:flex-row text-center">
           <Link href='/'>
-            <a className=" dark:text-white text-black p-3 hover:text-indigo-500 dark:hover:text-indigo-500 hover:bg-violet-50 rounded-lg transition ease-in ">Home</a>
+            <a className="  text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 dark:bg-transparent hover:shadow-lg dark:shadow-none dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Home</a>
           </Link>
             <Link href='/projects'>
-            <a className="dark:text-white text-black p-3 hover:text-indigo-500 dark:hover:text-indigo-500 hover:bg-violet-50 rounded-lg transition ease-in ">Projects</a>
+            <a className=" text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500  hover:shadow-lg dark:bg-transparent dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Projects</a>
             </Link>
             <Link href='/contact'>
-            <a className=" text-black dark:text-white p-3 hover:text-indigo-500 dark:hover:text-indigo-500 hover:bg-violet-50 rounded-lg transition ease-in ">Contact</a>
+            <a className=" text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 hover:shadow-lg dark:bg-transparent dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Contact</a>
             </Link>
 
             <div onClick={
@@ -57,10 +57,10 @@ export default function Navbar() {
             }>
               {darkMode ? (
 
-                <HiSun className="text-yellow-300 w-10 h-10 p-3 hover:text-yellow-600 hover:scale-105 bg-violet-50 rounded-lg transition ease-in mx-auto" />
+                <HiSun className="text-yellow-300 w-10 h-10 p-3 hover:text-yellow-600 hover:scale-105  dark:bg-violet-50 rounded-lg transition ease-in mx-auto" />
                 
               ) : (
-                <HiMoon className="text-blue-500 w-10 h-10 p-3 hover:text-indigo-600 hover:scale-105 bg-violet-50 rounded-lg transition ease-in mx-auto" />
+                <HiMoon className="text-blue-500 w-10 h-10 p-3 hover:text-indigo-600 hover:scale-105 hover:bg-white hover:shadow-lg rounded-lg transition ease-in mx-auto" />
               )}
                 
               

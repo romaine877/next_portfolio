@@ -1,9 +1,36 @@
-import React from "react";
 import Layout from "../components/Layout";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
 import {motion} from "framer-motion";
+import { useState } from "react";
 
 export default function contact() {
+
+
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const hasEmptyFields = Object.values(values).some((element) => element === "");
+
+    if (hasEmptyFields) {
+      alert("Please fill out all fields");
+    } else {
+      alert("Message sent!");
+      console.log(values);
+      
+    }
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
+
   return (
     <Layout title='Contact'>
       <div className="w-4/5 mx-auto my-10 md:flex md:flex-row-reverse md:justify-between">
@@ -12,7 +39,7 @@ export default function contact() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       >
-          <form action="post">
+          <form onSubmit={handleSubmit} >
             <div className="flex flex-col m-5 ">
               <label htmlFor="name" className="text-gray-700 text-sm mb-2">
                 Name
@@ -21,7 +48,10 @@ export default function contact() {
                 type="text"
                 name="name"
                 id="name"
-                className="bg-white rounded shadow-sm mb-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+                value={values.name}
+                onChange={handleChange}
+                required
+                className="  bg-white rounded shadow-md mb-2 px-3 text-gray-700 focus:ring-blue-500 border border-grey-200"
                 />
                 <label htmlFor="email" className="text-gray-700 text-sm mb-2">
                 Email
@@ -30,7 +60,10 @@ export default function contact() {
                 type="email"
                 name="email"
                 id="email"
-                className="bg-white rounded shadow-sm mb-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+                value={values.email}
+                onChange={handleChange}
+                required
+                className="bg-white rounded shadow-md mb-2 px-3 text-gray-700 focus:ring-blue-500 border border-grey-200"
                 />
                 <label htmlFor="message" className="text-gray-700 text-sm mb-2">
                 Message
@@ -38,12 +71,15 @@ export default function contact() {
               <textarea
                 name="message"
                 id="message"
+                value={values.message}
+                onChange={handleChange}
+                required
                 rows="5"
-                className="w-full bg-white rounded shadow-sm mb-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+                className="w-full bg-white rounded shadow-md mb-2 px-3 text-gray-700 focus:ring-blue-500 border border-grey-200"
               />
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-indigo-700 hover:scale-105 text-white font-bold py-2 px-4 rounded-md m-5 transition ease-in"
+                className=" bg-blue-500 hover:bg-indigo-700 hover:scale-105 text-white font-bold py-2 px-4 rounded-md m-5 transition ease-in"
               >
                 Submit
               </button>
