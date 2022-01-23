@@ -3,7 +3,7 @@ import {FaGithub, FaLinkedin} from "react-icons/fa";
 import {motion} from "framer-motion";
 import { useState } from "react";
 
-export default function contact() {
+export default function Contact() {
 
 
   const [values, setValues] = useState({
@@ -22,7 +22,7 @@ export default function contact() {
     } else {
       alert("Message sent!");
       console.log(values);
-      
+
     }
   }
 
