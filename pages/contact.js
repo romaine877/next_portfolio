@@ -25,7 +25,7 @@ export default function Contact() {
       alert("Please fill out all fields");
     } else {
       const res = await toast.promise(
-        fetch("/api/send", {
+        fetch(process.env.EMAIL_API, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
