@@ -5,9 +5,10 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
+import { emailApi } from "../config";
 
 export default function Contact() {
-  const router = useRouter()
+  const router = useRouter();
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -24,36 +25,43 @@ export default function Contact() {
     if (hasEmptyFields) {
       alert("Please fill out all fields");
     } else {
-      const res = await toast.promise(
-        fetch(process.env.EMAIL_API, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(values),
-        }),
-        {
-          success: "Your message has been sent successfully",
-          error: "There was an error sending your message",
-          pending: "Sending your message...",
+      const res = await  fetch(emailApi, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        {
-          position: toast.POSITION.TOP_CENTER,
-          
-          theme: localStorage.getItem("theme") === "dark" ? "dark" : "light",
-          
-          autoClose: 700,
-          hideProgressBar: true,
-          onClose: () => {
-            setValues({
-              name: "",
-              email: "",
-              message: "",
-            })
-           router.push("/")
-          },
-        }
-      );
+        body: JSON.stringify(values),
+      })
+
+      
+
+      if(res.ok){
+        toast.success('We\'ve recieved your email and will contact you soon.',{
+          theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
+          position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+        
+      }else{
+        toast.error("Sorry please try again later",{
+          theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
+          position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+      }
+      
+       
+      
     }
   };
 
@@ -61,12 +69,11 @@ export default function Contact() {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
   };
-
+  
   return (
     <Layout title="Contact">
       <div className="w-4/5 mx-auto my-10 md:flex md:flex-row-reverse md:justify-between">
-        <ToastContainer 
-        />
+        <ToastContainer/>
         <motion.div
           className="  md:w-1/2 mb-10 md:m-5 p-5 dark:bg-indigo-50 bg-white shadow-xl rounded-md"
           initial={{ opacity: 0 }}
