@@ -54,6 +54,7 @@ export default function Home() {
                 src="/images/react.png"
                 layout="fixed"
                 alt="react"
+                priority={true}
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
@@ -68,6 +69,7 @@ export default function Home() {
                 src="/images/js.png"
                 layout="fixed"
                 alt="JavaScript"
+                priority={true}
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
