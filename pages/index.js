@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import Navbar from "../components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -7,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <Layout title={'Home'}>
-      <div className="md:h-5/6 flex items-center">
+      <div className=" flex items-center">
         <div className=" w-5/6 mx-auto ">
           <h1 className="text-5xl font-bold pb-6 dark:text-white text-black text-center">
             Freelance Web and Mobile App Developer

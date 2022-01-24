@@ -2,8 +2,8 @@
 
 export default function Footer() {
   return (
-    <div className="flex justify-center items-center h-16 ">
-      <p className="dark:text-white text-center">
+    <div className="flex justify-center items-center h-24 ">
+      <p className="dark:text-white text-center m-10">
         © {new Date().getFullYear()}, Built by Romaine Halstead with
         {` `}
         <a href="https://nextjs.org/">Next.js</a>

@@ -1,16 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
-
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Project from "../components/Project";
 import ProjectModal from "../components/ProjectModal";
-import {API_URL} from "../utils/api";
+import { projectsApi } from "../config";
+
 
 export default function Projects({ projects }) {
   const [selectedItem, setSelectedItem] = useState(null);
   return (
     <Layout title='Projects'>
-      <div className="grid grid-cols-1 lg:grid-cols-2 mx-6 gap-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mx-6 md:mb-5">
         {projects.map((project) => (
           <motion.div key={project.id}>
             
@@ -30,7 +30,7 @@ export default function Projects({ projects }) {
 
 
 export async function getServerSideProps() {
-  const res = await fetch(API_URL);
+  const res = await fetch(projectsApi);
   const projectList = await res.json();
   const projects = projectList.projects;
   

@@ -142,9 +142,8 @@ export default function Contact() {
         <div className="md:w-1/2 flex flex-col justify-between">
           <div className="mb-10">
             <h1 className="text-4xl font-bold dark:text-white">Contact</h1>
-            <p className="dark:text-white my-4">
-              you can contact me at such place at such time, ill get in touch
-              with you soon
+            <p className="dark:text-white my-4 md:pr-6">
+              You can leave a message here in the contact form or you can reach me through the methods below.
             </p>
           </div>
           <div className="mb-10">

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FaSun, FaMoon,  } from "react-icons/fa";
 import { HiMoon, HiSun  } from "react-icons/hi";
 import { useEffect, useState } from "react";
 
