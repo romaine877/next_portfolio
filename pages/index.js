@@ -14,7 +14,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4 py-10 justify-items-center">
             <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 1, transition: { delay: 0.5 } }}
             exit={{ opacity: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -25,12 +25,12 @@ export default function Home() {
                 height={100}
                 src="/images/flutter.png"
                 alt="flutter"
-                
+                priority={true}
               />
             </motion.div>
             <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 1, transition: { delay: 0.5 } }}
             exit={{ opacity: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -40,10 +40,11 @@ export default function Home() {
                 height={100}
                 src="/images/tailwind.png"
                 alt="tailwind"
+                priority={true}
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1, transition: { delay: 0.5 } }}
       exit={{ opacity: 0 }}
       whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -58,7 +59,7 @@ export default function Home() {
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1, transition: { delay: 0.5 } }}
       exit={{ opacity: 0 }}
       whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -73,7 +74,7 @@ export default function Home() {
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1, transition: { delay: 0.5 } }}
       exit={{ opacity: 0 }}
       whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -84,10 +85,12 @@ export default function Home() {
                 src="/images/next.jpg"
                 layout="fixed"
                 alt="nextjs"
+                priority={true}
+                
               />
             </motion.div>
             <motion.div initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1, transition: { delay: 0.5 } }}
       exit={{ opacity: 0 }}
       whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -98,6 +101,7 @@ export default function Home() {
                 src="/images/firebase.png"
                 layout="fixed"
                 alt="firebase"
+                priority={true}
               />
             </motion.div>
           </div>
