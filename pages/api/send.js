@@ -3,7 +3,7 @@ import { recieving_email, sendGridApiKey, sending_email } from "../../config";
 
 sgMail.setApiKey(sendGridApiKey);
 
-export default (req, res) => {
+export default function send(req, res) {
   if (req.method === "POST") {
     const { name, email, message } = req.body;
     const msg = {

@@ -106,7 +106,7 @@ export default function Home() {
             </motion.div>
           </div>
           <div className="flex my-2 justify-center">
-            <Link href="/contact">
+            <Link href="/contact" passHref>
               <button className="bg-blue-500 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 mb-20 py-3 px-4 dark:text-white text-black font-bold rounded-md flex">
                 Lets Get to Work
                 <svg
