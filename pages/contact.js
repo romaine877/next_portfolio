@@ -194,7 +194,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
               >
                 <span>
-                  <FaLinkedin className="h-10 w-10 " />
+                  <FaLinkedin className="h-10 w-10"/>
                 </span>
               </a>
             </div>
