@@ -40,7 +40,7 @@ export default function Contact() {
         message: "",
       });
       if(res.ok){
-        toast.success(`We\'ve recieved your email and will contact you soon.`,{
+        toast.success(`We\'ve recieved your email and will contact you soon...`,{
           theme: localStorage.getItem("darkMode") === "true" ? "dark" : "light",
           position: "top-center",
             autoClose: 3000,
