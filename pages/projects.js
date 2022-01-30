@@ -29,14 +29,14 @@ export default function Projects({ projects }) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(projectsApi);
   const projectList = await res.json();
   const projects = projectList.projects;
   
   return {
     props: {
-      projects,
+      projects
     },
   };
 }
