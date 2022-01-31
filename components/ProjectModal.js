@@ -9,7 +9,7 @@ export default function ProjectModal({ id, image, name, description, link, selec
     };
   return (
 
-    <div onClick={handleClose} className='bg-stone-500 h-full w-full z-40 flex fixed inset-0 bg-opacity-25 items-center justify-center'>
+    <div onClick={handleClose} className='bg-stone-500 backdrop-blur-sm h-full w-full z-40 flex fixed inset-0 bg-opacity-25 items-center justify-center'>
 
         
              <motion.div

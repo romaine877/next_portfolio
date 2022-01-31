@@ -1,12 +1,21 @@
 import Link from "next/link";
-import { HiMoon, HiSun  } from "react-icons/hi";
+import { HiMenu, HiMoon, HiSun  } from "react-icons/hi";
 import { useEffect, useState } from "react";
+import MobileNav from "./MobileNav";
 
 export default function Navbar() {
+
   const [darkMode, setDarkMode] = useState(false);
   const toggleDarkModeState = () => {
     setDarkMode(!darkMode);
   };
+
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+  const toggleMobileNav = () => {
+    setIsMobileNavOpen(!isMobileNavOpen);
+  };
+
 
   useEffect(() => {
     
@@ -29,14 +38,24 @@ export default function Navbar() {
 
   
   return (
-    <header className="flex flex-col md:flex-row justify-between items-center p-5">
+    <header className="flex flex-row justify-between items-center p-5">
       <Link href="/">
-      <a className="dark:text-white text-black p-3 hover:text-indigo-500 hover:bg-white hover:shadow-lg dark:hover:text-indigo-500 rounded-lg transition ease-in text-xl font-bold md:text-left text-center">
+      <a className="dark:text-white text-black p-3 hover:text-indigo-500 hover:bg-white hover:shadow-lg dark:hover:text-indigo-500 rounded-lg transition ease-in text-xl font-bold text-left">
        Romaine Halstead <br/>
-        <span className=" text-base font-normal md:text-left text-center">Full Stack Developer</span>
+        <span className=" text-base font-normal text-left ">Full Stack Developer</span>
       </a>
       </Link>
-      <nav className="md:space-x-7 md:space-y-0 space-y-1 md:py-3 flex flex-col md:flex-row text-center">
+      <div className="md:hidden">
+        {isMobileNavOpen ? (
+          
+          <MobileNav view={isMobileNavOpen} toggle={toggleMobileNav}/>
+          
+        )
+        : (
+          <HiMenu className="text-3xl dark:text-white hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 hover:shadow-lg dark:bg-transparent dark:hover:bg-violet-50" onClick={toggleMobileNav} />
+        )}
+      </div>
+      <nav className=" md:space-x-7 md:space-y-0 space-y-1 md:py-3 hidden md:flex md:flex-row text-center">
           <Link href='/'>
             <a className="  text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 dark:bg-transparent hover:shadow-lg dark:shadow-none dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Home</a>
           </Link>
@@ -65,9 +84,9 @@ export default function Navbar() {
               
             </div>
            
-
-
+                
       </nav>
+                
     </header>
   );
 }
