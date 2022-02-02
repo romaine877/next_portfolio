@@ -25,7 +25,8 @@ export default function Home() {
                 height={100}
                 src="/images/flutter.png"
                 alt="flutter"
-                priority={true}
+               layout="intrinsic"
+               priority={true}
               />
             </motion.div>
             <motion.div
@@ -40,6 +41,7 @@ export default function Home() {
                 height={100}
                 src="/images/tailwind.png"
                 alt="tailwind"
+                layout="intrinsic"
                 priority={true}
               />
             </motion.div>
@@ -53,7 +55,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src="/images/react.png"
-                layout="fixed"
+                layout="intrinsic"
                 alt="react"
                 priority={true}
               />
@@ -68,7 +70,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src="/images/js.png"
-                layout="fixed"
+                layout="intrinsic"
                 alt="JavaScript"
                 priority={true}
               />
@@ -83,7 +85,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src="/images/next.jpg"
-                layout="fixed"
+                layout="intrinsic"
                 alt="nextjs"
                 priority={true}
                 
@@ -99,7 +101,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src="/images/firebase.png"
-                layout="fixed"
+                layout="intrinsic"
                 alt="firebase"
                 priority={true}
               />

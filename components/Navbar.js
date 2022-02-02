@@ -48,7 +48,7 @@ export default function Navbar() {
       <div className="md:hidden">
         {isMobileNavOpen ? (
           
-          <MobileNav view={isMobileNavOpen} toggle={toggleMobileNav}/>
+          <MobileNav toggle={toggleMobileNav}/>
           
         )
         : (

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { HiMoon, HiSun  } from "react-icons/hi";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-export default function MobileNav({view, toggle}) {
+export default function MobileNav({toggle}) {
 
     const [darkMode, setDarkMode] = useState(true);
   const toggleDarkModeState = () => {
@@ -12,7 +12,6 @@ export default function MobileNav({view, toggle}) {
 
   useEffect(() => {
 
-    console.log(view);
     
     const html = document.getElementsByTagName("html")[0];
 
