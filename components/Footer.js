@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <div className="flex justify-center items-center h-24 ">
+    <footer className="flex justify-center items-center h-24 ">
       <p className="dark:text-white text-center m-10">
         © {new Date().getFullYear()}, Built by Romaine Halstead with
         {` `}
@@ -15,7 +15,7 @@ export default function Footer() {
           Framer Motion
         </a>
       </p>
-    </div>
+    </footer>
 
   )
 }

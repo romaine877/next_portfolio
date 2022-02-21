@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HiMenu, HiMoon, HiSun  } from "react-icons/hi";
 import { useEffect, useState } from "react";
 import MobileNav from "./MobileNav";
+import Logo from "./Logo";
 
 export default function Navbar() {
 
@@ -40,10 +41,17 @@ export default function Navbar() {
   return (
     <header className="flex flex-row justify-between items-center p-5">
       <Link href="/">
-      <a className="dark:text-white text-black p-3 hover:text-indigo-500 hover:bg-white hover:shadow-lg dark:hover:text-indigo-500 rounded-lg transition ease-in text-xl font-bold text-left">
+        <div className="flex items-center dark:fill-white fill-black hover:fill-indigo-500 dark:hover:fill-indigo-500 dark:text-white text-black p-3 hover:text-indigo-500 hover:bg-white hover:shadow-lg dark:hover:text-indigo-500 rounded-lg transition ease-in text-xl font-bold text-left">
+          <Logo />
+          <div>
+
+      <a className="">
        Romaine Halstead <br/>
         <span className=" text-base font-normal text-left ">Full Stack Developer</span>
       </a>
+          </div>
+        </div>
+      
       </Link>
       <div className="md:hidden">
         {isMobileNavOpen ? (
@@ -52,7 +60,11 @@ export default function Navbar() {
           
         )
         : (
-          <HiMenu className="text-3xl dark:text-white hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 hover:shadow-lg dark:bg-transparent dark:hover:bg-violet-50" onClick={toggleMobileNav} />
+          
+             <HiMenu className="text-3xl dark:text-white hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 hover:shadow-lg dark:bg-transparent dark:hover:bg-violet-50" onClick={toggleMobileNav} />
+          
+         
+         
         )}
       </div>
       <nav className=" md:space-x-7 md:space-y-0 space-y-1 md:py-3 hidden md:flex md:flex-row text-center">
