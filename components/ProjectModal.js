@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 export default function ProjectModal({ id, image, name, description, link, selectHandler }) {
     

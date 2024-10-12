@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { motion } from "framer-motion";
 
 export default function Home() {
