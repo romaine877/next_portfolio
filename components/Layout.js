@@ -12,7 +12,7 @@ export default function Layout({ children, title }) {
       
         <Head>
             <title>{`Romaine Halstead - ${title}`}</title>
-            <Link rel="icon" href="/images/react.png" />
+            <link rel="icon" href="/images/react.png" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             
             <meta name='description' content='Portfolio of Romaine Halstead' />
