@@ -6,6 +6,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 import { emailApi } from "../config";
+import Link from "next/link";
 
 export default function Contact() {
   const router = useRouter();
@@ -148,7 +149,7 @@ export default function Contact() {
           </div>
           <div className="mb-10">
          
-            <a
+            <Link
               href="mailto:developer@romaine.dev"
               className="text-base bg-blue-500 w-72 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 py-3 px-4 text-white font-bold rounded-md flex justify-start"
             >
@@ -162,28 +163,28 @@ export default function Contact() {
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
               developer@romaine.dev
-            </a>
+            </Link>
           </div>
           <div className="flex w-1/3 m-5 justify-between">
             <div className="hover:bg-indigo-600 rounded-full p-5 transition ease-in dark:text-white hover:text-white">
-              <a
+              <Link
                 href="https://github.com/romaine877"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaGithub className="h-10 w-10 " />
-              </a>
+              </Link>
             </div>
             <div className="hover:bg-indigo-600 rounded-full p-5 transition ease-in dark:text-white hover:text-white">
-              <a
-                href="https://www.linkedin.com/in/romaine877/"
+              <Link
+                href="https://www.Linkedin.com/in/romaine877/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span>
                   <FaLinkedin className="h-10 w-10"/>
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,19 +1,21 @@
 
 
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className="flex justify-center items-center h-24 ">
       <p className="dark:text-white text-center m-10">
         © {new Date().getFullYear()}, Built by Romaine Halstead with
         {` `}
-        <a href="https://nextjs.org/">Next.js</a>
-        <a href='https://tailwindcss.com/' className="ml-2">
+        <Link href="https://nextjs.org/">Next.js</Link>
+        <Link href='https://tailwindcss.com/' className="ml-2">
           Tailwind CSS
-        </a>
+        </Link>
         {` `}and
-        <a href='https://framer.com/motion/' className="ml-2">
+        <Link href='https://framer.com/motion/' className="ml-2">
           Framer Motion
-        </a>
+        </Link>
       </p>
     </footer>
 

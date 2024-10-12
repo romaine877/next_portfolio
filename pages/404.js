@@ -16,10 +16,9 @@ export default function NotFound() {
                 </p>
                 <div className="flex justify-center my-5">
 
-                <Link href="/">
-                    <a className="bg-blue-500 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 mb-20 py-3 px-4 dark:text-white text-black font-bold rounded-md flex">
+                <Link href="/" className="bg-blue-500 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 mb-20 py-3 px-4 dark:text-white text-black font-bold rounded-md flex">
                         Go Home
-                    </a>
+                   
                 </Link>
                 </div>
             </div>

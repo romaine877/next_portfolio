@@ -45,10 +45,10 @@ export default function Navbar() {
           <Logo />
           <div>
 
-      <a className="">
+
        Romaine Halstead <br/>
         <span className=" text-base font-normal text-left ">Full Stack Developer</span>
-      </a>
+     
           </div>
         </div>
       
@@ -69,13 +69,13 @@ export default function Navbar() {
       </div>
       <nav className=" md:space-x-7 md:space-y-0 space-y-1 md:py-3 hidden md:flex md:flex-row text-center">
           <Link href='/'>
-            <a className="  text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 dark:bg-transparent hover:shadow-lg dark:shadow-none dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Home</a>
+            <div className="  text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 dark:bg-transparent hover:shadow-lg dark:shadow-none dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Home</div>
           </Link>
             <Link href='/projects'>
-            <a className=" text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500  hover:shadow-lg dark:bg-transparent dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Projects</a>
+            <div className=" text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500  hover:shadow-lg dark:bg-transparent dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Projects</div>
             </Link>
             <Link href='/contact'>
-            <a className=" text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 hover:shadow-lg dark:bg-transparent dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Contact</a>
+            <div className=" text-black dark:text-white p-3 hover:text-indigo-500 hover:bg-white dark:hover:text-indigo-500 hover:shadow-lg dark:bg-transparent dark:hover:bg-violet-50 hover:scale-105 rounded-lg transition ease-in ">Contact</div>
             </Link>
 
             <div onClick={
