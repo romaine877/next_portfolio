@@ -11,7 +11,7 @@ export default function Layout({ children, title }) {
         <div className='max-w-7xl mx-auto relative h-screen flex flex-col justify-between'>
       
         <Head>
-            <title>Romaine Halstead - {title}</title>
+            <title>{`Romaine Halstead - ${title}`}</title>
             <Link rel="icon" href="/images/react.png" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             
