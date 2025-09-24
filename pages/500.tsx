@@ -1,8 +1,6 @@
 import Layout from "../components/Layout"
 import Link from "next/link"
 
-
-
 export default function ServerError() {
   return (
     <Layout title={'500'}>
@@ -15,15 +13,14 @@ export default function ServerError() {
                     Internal Server Error, please try again later.
                 </p>
                 <div className="flex justify-center my-5">
-
                 <Link href="/" className="bg-blue-500 hover:bg-indigo-700 hover:scale-105 transition ease-in m-3 mb-20 py-3 px-4 dark:text-white text-black font-bold rounded-md flex">
                         Go Home
-                    
                 </Link>
                 </div>
             </div>
         </div>
     </Layout>
-
   )
 }
+
+
