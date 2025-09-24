@@ -4,7 +4,7 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
-import { emailApi } from "../config";
+import { emailApi } from "../config/config";
 import Link from "next/link";
 
 type FormValues = { name: string; email: string; message: string };

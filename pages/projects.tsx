@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Project from "../components/Project";
 import ProjectModal from "../components/ProjectModal";
-import { projectsApi } from "../config";
+import { projectsApi } from "../config/config";
 
 type ProjectItem = { id: string; name: string; slug: string; description: string; image: string; link: string };
 
