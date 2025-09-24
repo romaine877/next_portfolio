@@ -1,5 +1,3 @@
-
-
 import Link from 'next/link'
 
 export default function Footer() {
@@ -13,11 +11,11 @@ export default function Footer() {
           Tailwind CSS
         </Link>
         {` `}and
-        <Link href='https://framer.com/motion/' className="ml-2">
-          Framer Motion
-        </Link>
+        <span className="ml-2">CSS Transitions</span>
       </p>
     </footer>
 
   )
 }
+
+

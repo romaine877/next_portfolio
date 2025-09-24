@@ -1,7 +1,6 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import Image from "next/legacy/image";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -12,14 +11,7 @@ export default function Home() {
             Freelance Web and Mobile App Developer
           </h1>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4 py-10 justify-items-center">
-            <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 0.5 } }}
-            exit={{ opacity: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            >
-              
+            <div>
               <Image
                 width={100}
                 height={100}
@@ -28,14 +20,8 @@ export default function Home() {
                layout="intrinsic"
                priority={true}
               />
-            </motion.div>
-            <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 0.5 } }}
-            exit={{ opacity: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            >
+            </div>
+            <div>
               <Image
                 width={100}
                 height={100}
@@ -44,13 +30,8 @@ export default function Home() {
                 layout="intrinsic"
                 priority={true}
               />
-            </motion.div>
-            <motion.div initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 0.5 } }}
-      exit={{ opacity: 0 }}
-      whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-      >
+            </div>
+            <div>
               <Image
                 width={100}
                 height={100}
@@ -59,13 +40,8 @@ export default function Home() {
                 alt="react"
                 priority={true}
               />
-            </motion.div>
-            <motion.div initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 0.5 } }}
-      exit={{ opacity: 0 }}
-      whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-      >
+            </div>
+            <div>
               <Image
                 width={100}
                 height={100}
@@ -74,13 +50,8 @@ export default function Home() {
                 alt="JavaScript"
                 priority={true}
               />
-            </motion.div>
-            <motion.div initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 0.5 } }}
-      exit={{ opacity: 0 }}
-      whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-      >
+            </div>
+            <div>
               <Image
                 width={100}
                 height={100}
@@ -90,13 +61,8 @@ export default function Home() {
                 priority={true}
                 
               />
-            </motion.div>
-            <motion.div initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 0.5 } }}
-      exit={{ opacity: 0 }}
-      whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-      >
+            </div>
+            <div>
               <Image
                 width={100}
                 height={100}
@@ -105,7 +71,7 @@ export default function Home() {
                 alt="firebase"
                 priority={true}
               />
-            </motion.div>
+            </div>
           </div>
           <div className="flex my-2 justify-center">
             <Link href="/contact" passHref>
@@ -133,3 +99,5 @@ export default function Home() {
     </Layout>
   );
 }
+
+
